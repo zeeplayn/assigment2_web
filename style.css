@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222;
+  background-color: #fafafa;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.section {
+  padding: 40px 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  background-color: #3a6df0;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* ===================== TASK 0: NAVIGATION BAR (Flexbox) ===================== */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #222;
+  color: white;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* ===================== TASK 1: CARD ROW (Flexbox) ===================== */
+
+.card-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 250px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  flex-grow: 1;
+  margin: 10px 0;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* ===================== TASK 2: PAGE LAYOUT WITH GRID AREAS ===================== */
+
+.layout-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 80px 1fr 60px;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  gap: 10px;
+  min-height: 400px;
+}
+
+.layout-header {
+  grid-area: header;
+  background-color: #3a6df0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.layout-sidebar {
+  grid-area: sidebar;
+  background-color: #d8e0f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.layout-main {
+  grid-area: main;
+  background-color: #eef1fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.layout-footer {
+  grid-area: footer;
+  background-color: #222;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===================== TASK 3: IMAGE GALLERY (Grid) ===================== */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding: 8px 0;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+/* ===================== TASK 4: PORTFOLIO PAGE (Flexbox + Grid) ===================== */
+
+.portfolio-page {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* header uses Flexbox */
+.portfolio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #222;
+  color: white;
+}
+
+.portfolio-header .nav-links {
+  gap: 20px;
+}
+
+/* main section uses Grid: projects on the left, sidebar on the right */
+.portfolio-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.project-card {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.project-card button {
+  align-self: flex-start;
+}
+
+.portfolio-sidebar {
+  background-color: #eef1fa;
+  border-radius: 4px;
+  padding: 15px;
+}
+
+.portfolio-footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 12px 0;
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+@media (max-width: 700px) {
+  .layout-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main"
+      "footer";
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .portfolio-main {
+    grid-template-columns: 1fr;
+  }
+}

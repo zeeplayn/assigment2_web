@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment 2 - Flexbox & Grid</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== TASK 0: NAVIGATION BAR (Flexbox) ===================== -->
+  <header class="navbar">
+    <div class="logo">MyLogo</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#cards">Cards</a></li>
+        <li><a href="#layout">Layout</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== TASK 1: CARD ROW (Flexbox) ===================== -->
+    <section id="cards" class="section">
+      <h2>Task 1. Card Row</h2>
+      <div class="card-row">
+
+        <div class="card">
+          <img src="https://picsum.photos/id/1011/300/180" alt="Card 1">
+          <h3>Card One</h3>
+          <p>A short description that explains what this card is about.</p>
+          <button>Learn More</button>
+        </div>
+
+        <div class="card">
+          <img src="https://picsum.photos/id/1015/300/180" alt="Card 2">
+          <h3>Card Two</h3>
+          <p>Some cards will have a bit more text than others, on purpose.</p>
+          <button>Learn More</button>
+        </div>
+
+        <div class="card">
+          <img src="https://picsum.photos/id/1025/300/180" alt="Card 3">
+          <h3>Card Three</h3>
+          <p>Short text.</p>
+          <button>Learn More</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== TASK 2: PAGE LAYOUT WITH GRID AREAS ===================== -->
+    <section id="layout" class="section">
+      <h2>Task 2. Page Layout with Grid Areas</h2>
+      <div class="layout-grid">
+        <header class="layout-header">Header</header>
+        <aside class="layout-sidebar">Sidebar</aside>
+        <div class="layout-main">Main Content</div>
+        <footer class="layout-footer">Footer</footer>
+      </div>
+    </section>
+
+    <!-- ===================== TASK 3: IMAGE GALLERY (Grid) ===================== -->
+    <section id="gallery" class="section">
+      <h2>Task 3. Image Gallery</h2>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/1035/300/300" alt="Gallery image 1">
+          <div class="overlay">Mountains</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/1041/300/300" alt="Gallery image 2">
+          <div class="overlay">Forest</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/1043/300/300" alt="Gallery image 3">
+          <div class="overlay">Lake</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/1050/300/300" alt="Gallery image 4">
+          <div class="overlay">City</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/1052/300/300" alt="Gallery image 5">
+          <div class="overlay">Bridge</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/1056/300/300" alt="Gallery image 6">
+          <div class="overlay">Road</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/1060/300/300" alt="Gallery image 7">
+          <div class="overlay">Beach</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/1062/300/300" alt="Gallery image 8">
+          <div class="overlay">Animal</div>
+        </div>
+        <div class="gallery-item">
+          <img src="https://picsum.photos/id/1074/300/300" alt="Gallery image 9">
+          <div class="overlay">Nature</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TASK 4: PORTFOLIO PAGE (Flexbox + Grid) ===================== -->
+    <section id="portfolio" class="section">
+      <h2>Task 4. Portfolio Page</h2>
+
+      <div class="portfolio-page">
+
+        <header class="portfolio-header">
+          <div class="logo">Portfolio</div>
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </header>
+
+        <div class="portfolio-main">
+
+          <div class="projects">
+            <div class="project-card">
+              <h4>Project One</h4>
+              <p>Small description of the project goes here.</p>
+              <button>View</button>
+            </div>
+            <div class="project-card">
+              <h4>Project Two</h4>
+              <p>Small description of the project goes here.</p>
+              <button>View</button>
+            </div>
+            <div class="project-card">
+              <h4>Project Three</h4>
+              <p>Small description of the project goes here.</p>
+              <button>View</button>
+            </div>
+          </div>
+
+          <aside class="portfolio-sidebar">
+            <h4>About Me</h4>
+            <p>A short paragraph about the portfolio owner and their skills.</p>
+          </aside>
+
+        </div>
+
+        <footer class="portfolio-footer">
+          &copy; 2026 My Portfolio. All rights reserved.
+        </footer>
+
+      </div>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

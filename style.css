@@ -29,7 +29,7 @@ button {
   cursor: pointer;
 }
 
-/* ===================== TASK 0: NAVIGATION BAR (Flexbox) ===================== */
+/* TASK 0: NAVIGATION BAR (Flexbox)*/
 
 .navbar {
   display: flex;
@@ -61,7 +61,7 @@ button {
   text-decoration: underline;
 }
 
-/* ===================== TASK 1: CARD ROW (Flexbox) ===================== */
+/* TASK 1: CARD ROW (Flexbox) */
 
 .card-row {
   display: flex;
@@ -96,7 +96,7 @@ button {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
-/* ===================== TASK 2: PAGE LAYOUT WITH GRID AREAS ===================== */
+/* TASK 2: PAGE LAYOUT WITH GRID AREAS */
 
 .layout-grid {
   display: grid;
@@ -144,7 +144,7 @@ button {
   justify-content: center;
 }
 
-/* ===================== TASK 3: IMAGE GALLERY (Grid) ===================== */
+/* TASK 3: IMAGE GALLERY (Grid) */
 
 .gallery {
   display: grid;
@@ -174,15 +174,13 @@ button {
   color: white;
   text-align: center;
   padding: 8px 0;
-  opacity: 0;
-  transition: opacity 0.2s ease;
 }
 
 .gallery-item:hover .overlay {
   opacity: 1;
 }
 
-/* ===================== TASK 4: PORTFOLIO PAGE (Flexbox + Grid) ===================== */
+/* TASK 4: PORTFOLIO PAGE (Flexbox + Grid) */
 
 .portfolio-page {
   border: 1px solid #ddd;
@@ -244,7 +242,7 @@ button {
   padding: 12px 0;
 }
 
-/* ===================== RESPONSIVE ===================== */
+/* RESPONSIVE */
 
 @media (max-width: 700px) {
   .layout-grid {
